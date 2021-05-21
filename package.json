@@ -9,6 +9,9 @@
     },
     "author": "JungHun Kim <mnthe@pubg.com>",
     "license": "MIT",
+    "publishConfig": {
+        "access": "public"
+    },
     "release": {
         "plugins": [
             "@semantic-release/commit-analyzer",
