@@ -47,7 +47,7 @@ Update policy
         "repository": "https://mychart.company.org/chartrepo/myproject",
         "chartDirectory": "./chart",
         "versionUpdatePolicy": "sync",
-        "appVersionUpdatePolicy": "static"
+        "appVersionUpdatePolicy": "fixed"
       }
     ]
   ]
