@@ -1,3 +1,10 @@
+## [1.0.3](https://git.projectbro.com/Devops/semantic-release-helm/compare/v1.0.2...v1.0.3) (2021-05-21)
+
+
+### Bug Fixes
+
+* **semantic-release:** semantic-release/git 플러그인에서 package*.json 파일 트래킹하지 않도록 변경 ([35f4f3c](https://git.projectbro.com/Devops/semantic-release-helm/commit/35f4f3c488161f092cc772b83edc08e11b1953c1))
+
 ## [1.0.2](https://git.projectbro.com/Devops/semantic-release-helm/compare/v1.0.1...v1.0.2) (2021-05-21)
 
 
