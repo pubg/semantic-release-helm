@@ -1,3 +1,10 @@
+# [1.1.0](https://git.projectbro.com/Devops/semantic-release-helm/compare/v1.0.3...v1.1.0) (2021-05-21)
+
+
+### Features
+
+* **semantic-release:** 플러그인 순서 변경 및 package.json 관리하도록 변경 ([803a705](https://git.projectbro.com/Devops/semantic-release-helm/commit/803a7054f20d09759c89950c26f12f84c64f0bb0))
+
 ## [1.0.3](https://git.projectbro.com/Devops/semantic-release-helm/compare/v1.0.2...v1.0.3) (2021-05-21)
 
 
