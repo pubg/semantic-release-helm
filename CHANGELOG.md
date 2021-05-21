@@ -1,3 +1,10 @@
+## [1.0.1](https://git.projectbro.com/Devops/semantic-release-helm/compare/v1.0.0...v1.0.1) (2021-05-21)
+
+
+### Bug Fixes
+
+* **package.json:** fix publish config access type ([0aec97e](https://git.projectbro.com/Devops/semantic-release-helm/commit/0aec97ef0ac02a04c4bafb92185596712f890898))
+
 # 1.0.0 (2021-05-21)
 
 
