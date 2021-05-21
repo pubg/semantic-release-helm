@@ -1,0 +1,13 @@
+stages:
+  - deploy
+
+deploy:
+  image: node:14-buster-slim
+  stage: deploy
+  only:
+    - master
+  before_script:
+    - apt-get update && apt-get install -y --no-install-recommends git-core ca-certificates openssh-server curl
+  script:
+    - npm install
+    - npx semantic-release -r "$(git remote get-url origin | tr -d '\n')"

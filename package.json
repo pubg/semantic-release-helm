@@ -15,18 +15,11 @@
     "release": {
         "plugins": [
             "@semantic-release/commit-analyzer",
-            "@semantic-release/npm",
             "@semantic-release/release-notes-generator",
             [
                 "@semantic-release/changelog",
                 {
                     "changelogFile": "CHANGELOG.md"
-                }
-            ],
-            [
-                "@semantic-release/gitlab",
-                {
-                    "gitlabUrl": "https://git.projectbro.com"
                 }
             ],
             [
@@ -38,7 +31,14 @@
                         "CHANGELOG.md"
                     ]
                 }
-            ]
+            ],
+            [
+                "@semantic-release/gitlab",
+                {
+                    "gitlabUrl": "https://git.projectbro.com"
+                }
+            ],
+            "@semantic-release/npm"
         ]
     },
     "devDependencies": {
