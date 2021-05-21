@@ -12,11 +12,28 @@
     "release": {
         "plugins": [
             "@semantic-release/commit-analyzer",
+            "@semantic-release/npm",
             "@semantic-release/release-notes-generator",
             [
-                "@pubgcorp/semantic-release-helm",
+                "@semantic-release/changelog",
                 {
-                    "repository": "https://harbor.pubg.io/chartrepo/pubg_devops"
+                    "changelogFile": "CHANGELOG.md"
+                }
+            ],
+            [
+                "@semantic-release/gitlab",
+                {
+                    "gitlabUrl": "https://git.projectbro.com"
+                }
+            ],
+            [
+                "@semantic-release/git",
+                {
+                    "assets": [
+                        "package.json",
+                        "package-lock.json",
+                        "CHANGELOG.md"
+                    ]
                 }
             ]
         ]
