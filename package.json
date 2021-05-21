@@ -22,10 +22,12 @@
                     "changelogFile": "CHANGELOG.md"
                 }
             ],
+            "@semantic-release/npm",
             [
                 "@semantic-release/git",
                 {
                     "assets": [
+                        "package.json",
                         "CHANGELOG.md"
                     ]
                 }
@@ -35,8 +37,7 @@
                 {
                     "gitlabUrl": "https://git.projectbro.com"
                 }
-            ],
-            "@semantic-release/npm"
+            ]
         ]
     },
     "devDependencies": {
