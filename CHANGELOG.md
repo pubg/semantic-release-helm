@@ -1,3 +1,11 @@
+## [1.1.1](https://git.projectbro.com/Devops/semantic-release-helm/compare/v1.1.0...v1.1.1) (2021-05-23)
+
+
+### Bug Fixes
+
+* **publish:** fix chartpath already declared and import missing modules ([453d2cb](https://git.projectbro.com/Devops/semantic-release-helm/commit/453d2cb3f4d6fdb00722f0c1cf2cc160b750b3f4))
+* **verifyconditions:** remove redundant shell escape ([82ee94d](https://git.projectbro.com/Devops/semantic-release-helm/commit/82ee94da4cda15c3ae3d08fc6a25e0faa911e41f))
+
 # [1.1.0](https://git.projectbro.com/Devops/semantic-release-helm/compare/v1.0.3...v1.1.0) (2021-05-21)
 
 
