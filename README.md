@@ -16,7 +16,7 @@ npm install -D @pubgcorp/semantic-release-helm
 | ---------------------- | --------------------------------------------------------------------- | -------- | ------------------------------- | -------- |
 | repository             | URI for chart repository                                              | yes      | `string`                        | `none`   |
 | chartDirectory         | Chart directory where `Chart.yml` is located                          | no       | `string`                        | `.`      |
-| useOCIFeature          | Enable `HELM_EXPERIMENTAL_OCI` feature and use OCI supported registry | no       | `boolean`                       | `false`  |
+supported registry | no       | `boolean`                       | `false`  |
 | versionUpdatePolicy    | Set update policy for `version` field of Chart.yaml                   | no       | `"fixed" \| "sync" \| "desync"` | `"sync"` |
 | appVersionUpdatePolicy | Set update policy for `appVersion` field of Chart.yaml                | no       | `"fixed" \| "sync" \| "desync"` | `"sync"` |
 
@@ -44,7 +44,8 @@ Update policy
     [
       "@pubgcorp/semantic-release-helm",
       {
-        "repository": "https://mychart.company.org/chartrepo/myproject",
+        "chartRepository": "https://mychart.company.org/chartrepo/myproject",
+        "ociRegistry": "mychart.company.org/myproject",
         "chartDirectory": "./chart",
         "versionUpdatePolicy": "sync",
         "appVersionUpdatePolicy": "fixed"
@@ -54,7 +55,8 @@ Update policy
 }
 ```
 
-- Your chart repository is `https://mychart.company.org/chartrepo/myproject` and `Chart.yaml` is in `chart` sub-directory
+- Your chart repository is `https://mychart.company.org/chartrepo/myproject` and OCI registry is `mychart.company.org/myproject`.
+- `Chart.yaml` is in `chart` sub-directory
 - `version` will follow next release version and `appVersion` will not modified
 
 
