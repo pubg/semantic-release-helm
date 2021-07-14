@@ -14,11 +14,13 @@ npm install -D @pubgcorp/semantic-release-helm
 
 | Options                | Descriptions                                           | Required | type                            | Default  |
 | ---------------------- | ------------------------------------------------------ | -------- | ------------------------------- | -------- |
-| chartRepository        | URI for chart repository                               | yes      | `string`                        | `none`   |
-| ociRegistry            | URI for OCI regisitry                                  | yes      | `string`                        | `none`   |
+| chartRepository        | URI for chart repository                               | yes*     | `string`                        | `none`   |
+| ociRegistry            | URI for OCI regisitry                                  | yes*     | `string`                        | `none`   |
 | chartDirectory         | Chart directory where `Chart.yml` is located           | no       | `string`                        | `.`      |
 | versionUpdatePolicy    | Set update policy for `version` field of Chart.yaml    | no       | `"fixed" \| "sync" \| "desync"` | `"sync"` |
 | appVersionUpdatePolicy | Set update policy for `appVersion` field of Chart.yaml | no       | `"fixed" \| "sync" \| "desync"` | `"sync"` |
+
+\* At least one of ociRegistry or chartrepository is required.
 
 Pass credentials through environment variable to login helm repository.
 
