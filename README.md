@@ -12,13 +12,13 @@ npm install -D @pubgcorp/semantic-release-helm
 
 ## Configuration
 
-| Options                | Descriptions                                                          | Required | type                            | Default  |
-| ---------------------- | --------------------------------------------------------------------- | -------- | ------------------------------- | -------- |
-| chartRepository             | URI for chart repository                                              | yes      | `string`                        | `none`   |
-| ociRegistry             | URI for OCI regisitry                                              | yes      | `string`                        | `none`   |
-| chartDirectory         | Chart directory where `Chart.yml` is located                          | no       | `string`                        | `.`      |
-| versionUpdatePolicy    | Set update policy for `version` field of Chart.yaml                   | no       | `"fixed" \| "sync" \| "desync"` | `"sync"` |
-| appVersionUpdatePolicy | Set update policy for `appVersion` field of Chart.yaml                | no       | `"fixed" \| "sync" \| "desync"` | `"sync"` |
+| Options                | Descriptions                                           | Required | type                            | Default  |
+| ---------------------- | ------------------------------------------------------ | -------- | ------------------------------- | -------- |
+| chartRepository        | URI for chart repository                               | yes      | `string`                        | `none`   |
+| ociRegistry            | URI for OCI regisitry                                  | yes      | `string`                        | `none`   |
+| chartDirectory         | Chart directory where `Chart.yml` is located           | no       | `string`                        | `.`      |
+| versionUpdatePolicy    | Set update policy for `version` field of Chart.yaml    | no       | `"fixed" \| "sync" \| "desync"` | `"sync"` |
+| appVersionUpdatePolicy | Set update policy for `appVersion` field of Chart.yaml | no       | `"fixed" \| "sync" \| "desync"` | `"sync"` |
 
 Pass credentials through environment variable to login helm repository.
 
@@ -33,7 +33,7 @@ Update policy
 
 - **fixed**: Use Fixed version. The version will not be updated
 - **sync**: Use `nextRelease.version`. New version will be set to `nextRelease.version`
-- **desync**: Version will be increased according to `nextRelease.type` (one of *`major`*, *`premajor`*, *`minor`*, *`preminor`*, *`patch`*, *`prepatch`*, *`prerelease`*)
+- **desync**: Version will be increased according to `nextRelease.type` (one of _`major`_, _`premajor`_, _`minor`_, _`preminor`_, _`patch`_, _`prepatch`_, _`prerelease`_)
 
 ## Example
 
@@ -58,8 +58,8 @@ Update policy
 - `Chart.yaml` is in `chart` sub-directory
 - `version` will follow next release version and `appVersion` will not modified
 
-
 Old version
+
 ```yaml
 # semantic-release version: 1.2.3
 version: 1.2.3
@@ -67,6 +67,7 @@ appVersion: 2.3.1
 ```
 
 New version - Case #1 patch
+
 ```yaml
 # semantic-release version: 1.2.4
 version: 1.2.4
@@ -74,6 +75,7 @@ appVersion: 2.3.1
 ```
 
 New version - Case #2 minor
+
 ```yaml
 # semantic-release version: 1.3.0
 version: 1.3.0
@@ -81,6 +83,7 @@ appVersion: 2.3.1
 ```
 
 New version - Case #3 major
+
 ```yaml
 # semantic-release version: 2.0.0
 version: 2.0.0
