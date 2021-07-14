@@ -1,3 +1,17 @@
+# [1.2.0](https://git.projectbro.com/Devops/semantic-release-helm/compare/v1.1.1...v1.2.0) (2021-07-14)
+
+
+### Bug Fixes
+
+* config check ([648d5f0](https://git.projectbro.com/Devops/semantic-release-helm/commit/648d5f015409e0ee92340aa90fc11167eccf0d74))
+* publish chart to both OCI and ChartRepo ([128281b](https://git.projectbro.com/Devops/semantic-release-helm/commit/128281b22bc931d9266a930c0c8e9230e59c0308))
+* throw error when both repositories do not exist ([f2ee778](https://git.projectbro.com/Devops/semantic-release-helm/commit/f2ee778967c25fbadbbead093c0840f2c34258ea))
+
+
+### Features
+
+* **publish:** oci, chartrepo 두 곳에 publish 하도록 변경 ([70952f4](https://git.projectbro.com/Devops/semantic-release-helm/commit/70952f4b5a5169621e53a54faba53cd130812c90))
+
 ## [1.1.1](https://git.projectbro.com/Devops/semantic-release-helm/compare/v1.1.0...v1.1.1) (2021-05-23)
 
 
