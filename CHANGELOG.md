@@ -1,3 +1,10 @@
+# [1.3.0](https://git.projectbro.com/Devops/semantic-release-helm/compare/v1.2.0...v1.3.0) (2023-01-20)
+
+
+### Features
+
+* Update helm release command to compatible 3.11 ([ccd513f](https://git.projectbro.com/Devops/semantic-release-helm/commit/ccd513f4c1b0101b9064e0c90152ce2a047a7e67))
+
 # [1.2.0](https://git.projectbro.com/Devops/semantic-release-helm/compare/v1.1.1...v1.2.0) (2021-07-14)
 
 
