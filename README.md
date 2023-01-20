@@ -91,3 +91,4 @@ New version - Case #3 major
 version: 2.0.0
 appVersion: 2.3.1
 ```
+
