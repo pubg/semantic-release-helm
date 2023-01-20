@@ -1,3 +1,10 @@
+## [1.3.2](https://git.projectbro.com/Devops/semantic-release-helm/compare/v1.3.1...v1.3.2) (2023-01-20)
+
+
+### Bug Fixes
+
+* Update to chart museum push command ([e6f6fcd](https://git.projectbro.com/Devops/semantic-release-helm/commit/e6f6fcdfc362dc4aaecc8c092e861c50c7e2aa08))
+
 ## [1.3.1](https://git.projectbro.com/Devops/semantic-release-helm/compare/v1.3.0...v1.3.1) (2023-01-20)
 
 
