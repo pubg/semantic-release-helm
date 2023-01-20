@@ -1,3 +1,10 @@
+## [1.3.1](https://git.projectbro.com/Devops/semantic-release-helm/compare/v1.3.0...v1.3.1) (2023-01-20)
+
+
+### Bug Fixes
+
+* Update helm publish chart commands ([0657fc4](https://git.projectbro.com/Devops/semantic-release-helm/commit/0657fc41aebce01faaf70d03a3f3f93d54cb5df7))
+
 # [1.3.0](https://git.projectbro.com/Devops/semantic-release-helm/compare/v1.2.0...v1.3.0) (2023-01-20)
 
 
