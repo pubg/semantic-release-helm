@@ -10,4 +10,4 @@ deploy:
     - apt-get update && apt-get install -y --no-install-recommends git-core ca-certificates openssh-server curl
   script:
     - npm install
-    - npx semantic-release -r "$(git remote get-url origin | tr -d '\n')"
+    - npx semantic-release -r "$CI_PROJECT_URL"
