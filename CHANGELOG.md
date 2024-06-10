@@ -1,3 +1,10 @@
+## [1.4.4](https://github.com/pubg/semantic-release-helm/compare/v1.4.3...v1.4.4) (2024-06-10)
+
+
+### Bug Fixes
+
+* Add more details on error message ([8d357db](https://github.com/pubg/semantic-release-helm/commit/8d357dbd235eaf55632092659966e2b841de9e5b))
+
 ## [1.4.3](https://github.com/pubg/semantic-release-helm/compare/v1.4.2...v1.4.3) (2024-06-10)
 
 
