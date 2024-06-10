@@ -1,3 +1,10 @@
+## [1.4.1](https://github.com/pubg/semantic-release-helm/compare/v1.4.0...v1.4.1) (2024-06-10)
+
+
+### Bug Fixes
+
+* Update README.md ([fee577c](https://github.com/pubg/semantic-release-helm/commit/fee577c73aa5d9d79dcbb55f5d9aef3f96ea1d20))
+
 # [1.4.0](https://github.com/pubg/semantic-release-helm/compare/v1.3.2...v1.4.0) (2024-06-10)
 
 
