@@ -6,12 +6,15 @@ import {VerifyConditionsContext} from "semantic-release";
 export async function verifyConditions(pluginConfig: InputPluginConfig, context: VerifyConditionsContext): Promise<void> {
     const {ociRegistry, chartRepository} = validateAndMergeConfig(pluginConfig);
     if (ociRegistry) {
-        const {username, password} = resolveOCIRegistryCredentials(context.env);
+        const {username, password} = resolveOCIRegistryCredentials(context);
         await verifyOCIRegistry(ociRegistry, username, password);
     }
     if (chartRepository) {
-        const {username, password} = resolveChartRepositoryCredentials(context.env);
+        const {username, password} = resolveChartRepositoryCredentials(context);
         await verifyChartRepository(chartRepository, username, password);
+    }
+    if (!ociRegistry && !chartRepository) {
+        throw new Error("Either `ociRegistry` or `chartRepository` must be set.");
     }
 }
 
@@ -63,8 +66,8 @@ interface BasicAuth {
     password: string;
 }
 
-function resolveOCIRegistryCredentials(env: Record<string, string>): BasicAuth {
-    const {HELM_REGISTRY_USERNAME, HELM_REGISTRY_PASSWORD} = env;
+function resolveOCIRegistryCredentials(context: VerifyConditionsContext): BasicAuth {
+    const {HELM_REGISTRY_USERNAME, HELM_REGISTRY_PASSWORD} = context.env;
     if (HELM_REGISTRY_USERNAME && HELM_REGISTRY_PASSWORD) {
         return {
             username: HELM_REGISTRY_USERNAME,
@@ -72,14 +75,16 @@ function resolveOCIRegistryCredentials(env: Record<string, string>): BasicAuth {
         };
     }
 
+    context.logger.log("Environment variables HELM_REGISTRY_USERNAME and HELM_REGISTRY_PASSWORD are not set. fallback to use HELM_REPOSITORY_USERNAME and HELM_REPOSITORY_PASSWORD.");
+
     // fallback to resolve repository credentials
-    return resolveChartRepositoryCredentials(env);
+    return resolveChartRepositoryCredentials(context);
 }
 
-function resolveChartRepositoryCredentials(env: Record<string, string>): BasicAuth {
-    const {HELM_REPOSITORY_USERNAME, HELM_REPOSITORY_PASSWORD} = env;
+function resolveChartRepositoryCredentials(context: VerifyConditionsContext): BasicAuth {
+    const {HELM_REPOSITORY_USERNAME, HELM_REPOSITORY_PASSWORD} = context.env;
     if (!HELM_REPOSITORY_USERNAME || !HELM_REPOSITORY_PASSWORD) {
-        throw new Error("Missing chart repository credentials");
+        throw new Error("Environment variables HELM_REPOSITORY_USERNAME and HELM_REPOSITORY_PASSWORD are required.");
     }
     return {
         username: HELM_REPOSITORY_USERNAME,

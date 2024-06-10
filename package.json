@@ -15,7 +15,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/pubg/semantic-release-helm.git"
+    "url": "git+https://github.com/pubg/semantic-release-helm.git"
   },
   "scripts": {
     "build": "tsc -p tsconfig.json",

@@ -10,21 +10,11 @@ export async function publish(pluginConfig: InputPluginConfig, context: PublishC
     const chart = await loadHelmChart(chartDir);
     if (ociRegistry) {
         await publishChartToOCIRegistry(chartDirectory, ociRegistry, chart.name, chart.version);
-        context.logger.log(
-            "Chart %s:%s successfully published to %s.",
-            chart.name,
-            chart.version,
-            ociRegistry
-        );
+        context.logger.log("Chart %s:%s successfully published to %s.", chart.name, chart.version, ociRegistry);
     }
     if (chartRepository) {
         await publishChartToChartRepository(chartDirectory);
-        context.logger.log(
-            "Chart %s:%s successfully published to %s.",
-            chart.name,
-            chart.version,
-            chartRepository
-        );
+        context.logger.log("Chart %s:%s successfully published to %s.", chart.name, chart.version, chartRepository);
     }
 }
 
