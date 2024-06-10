@@ -1,45 +1,47 @@
 {
-    "name": "@pubgcorp/semantic-release-helm",
-    "version": "1.4.1",
-    "description": "Helm plugin for [semantic-release](https://github.com/semantic-release/semantic-release)",
-    "type": "module",
-    "module": "dist/index.js",
-    "files": [
-        "dist",
-        "package.json",
-        "tsconfig.json",
-        "README.md",
-        "CHANGELOG.md"
-    ],
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/pubg/semantic-release-helm.git"
-    },
-    "scripts": {
-        "build": "tsc -p tsconfig.json"
-    },
-    "author": "JungHun Kim <mnthe@pubg.com>, pubg-devops-cicd-bot@pubg.com",
-    "license": "MIT",
-    "publishConfig": {
-        "access": "public"
-    },
-    "devDependencies": {
-        "@semantic-release/changelog": "^6.0.3",
-        "@semantic-release/commit-analyzer": "^13.0.0",
-        "@semantic-release/exec": "^6.0.3",
-        "@semantic-release/git": "^10.0.1",
-        "@semantic-release/npm": "^12.0.1",
-        "@semantic-release/release-notes-generator": "^14.0.0",
-        "@types/js-yaml": "^4.0.9",
-        "@types/node": "^20.14.2",
-        "semantic-release": "^24.0.0",
-        "ts-patch": "^3.2.0",
-        "typescript": "^5.4.5"
-    },
-    "dependencies": {
-        "execa": "^4.1.0",
-        "js-yaml": "^4.1.0",
-        "semver": "^7.6.2",
-        "typia": "^6.0.6"
-    }
+  "name": "@pubgcorp/semantic-release-helm",
+  "version": "1.4.1",
+  "description": "Helm plugin for [semantic-release](https://github.com/semantic-release/semantic-release)",
+  "type": "module",
+  "module": "dist/index.js",
+  "files": [
+    "dist",
+    "package.json",
+    "tsconfig.json",
+    "README.md",
+    "CHANGELOG.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pubg/semantic-release-helm.git"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "prepare": "ts-patch install && typia patch"
+  },
+  "author": "JungHun Kim <mnthe@pubg.com>, pubg-devops-cicd-bot@pubg.com",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/commit-analyzer": "^13.0.0",
+    "@semantic-release/exec": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/npm": "^12.0.1",
+    "@semantic-release/release-notes-generator": "^14.0.0",
+    "@types/js-yaml": "^4.0.9",
+    "@types/node": "^20.14.2",
+    "semantic-release": "^24.0.0",
+    "ts-node": "^10.9.2",
+    "ts-patch": "^3.2.0",
+    "typescript": "^5.4.2"
+  },
+  "dependencies": {
+    "execa": "^4.1.0",
+    "js-yaml": "^4.1.0",
+    "semver": "^7.6.2",
+    "typia": "^6.0.6"
+  }
 }
