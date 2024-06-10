@@ -3,7 +3,9 @@
   "version": "1.4.2",
   "description": "Helm plugin for [semantic-release](https://github.com/semantic-release/semantic-release)",
   "type": "module",
-  "module": "dist/index.js",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "exports": "./dist/index.js",
   "files": [
     "dist",
     "package.json",
