@@ -1,3 +1,10 @@
+## [1.4.3](https://github.com/pubg/semantic-release-helm/compare/v1.4.2...v1.4.3) (2024-06-10)
+
+
+### Bug Fixes
+
+* Update package.json ([40faa2b](https://github.com/pubg/semantic-release-helm/commit/40faa2b826b4a67f1b89c5c5aca49527c3932276))
+
 ## [1.4.2](https://github.com/pubg/semantic-release-helm/compare/v1.4.1...v1.4.2) (2024-06-10)
 
 
