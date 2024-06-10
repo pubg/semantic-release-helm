@@ -1,6 +1,6 @@
 {
   "name": "@pubgcorp/semantic-release-helm",
-  "version": "1.4.1",
+  "version": "1.4.2",
   "description": "Helm plugin for [semantic-release](https://github.com/semantic-release/semantic-release)",
   "type": "module",
   "module": "dist/index.js",

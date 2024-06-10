@@ -1,3 +1,10 @@
+## [1.4.2](https://github.com/pubg/semantic-release-helm/compare/v1.4.1...v1.4.2) (2024-06-10)
+
+
+### Bug Fixes
+
+* Fix typia config ([3ffcd1d](https://github.com/pubg/semantic-release-helm/commit/3ffcd1ddfb4c97892efe2d158b034b26f78845a6))
+
 ## [1.4.1](https://github.com/pubg/semantic-release-helm/compare/v1.4.0...v1.4.1) (2024-06-10)
 
 
