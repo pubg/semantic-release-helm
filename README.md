@@ -1,8 +1,12 @@
 # semantic-release-helm
 
-Helm plugin for [semantic-release](https://github.com/semantic-release/semantic-release)
+[semantic-release](https://github.com/semantic-release/semantic-release) plugin to publish a helm chart to a helm repository and an OCI registry.
 
-It updates [Helm](https://helm.sh/) chart's `version` and `appVersion` in `Chart.yaml`
+It updates [Helm](https://helm.sh/) chart `version` and `appVersion` in `Chart.yaml`.
+
+It supports the following protocols:
+- [OCI](https://helm.sh/docs/topics/registries/)
+- [Chart Museum](https://chartmuseum.com/)
 
 ## Install
 
@@ -13,21 +17,29 @@ npm install -D @pubgcorp/semantic-release-helm
 ## Configuration
 
 | Options                | Descriptions                                           | Required | type                            | Default  |
-| ---------------------- | ------------------------------------------------------ | -------- | ------------------------------- | -------- |
+|------------------------|--------------------------------------------------------|----------|---------------------------------|----------|
 | chartRepository        | URI for chart repository                               | yes*     | `string`                        | `none`   |
-| ociRegistry            | URI for OCI regisitry                                  | yes*     | `string`                        | `none`   |
+| ociRegistry            | URI for OCI registry                                   | yes*     | `string`                        | `none`   |
 | chartDirectory         | Chart directory where `Chart.yml` is located           | no       | `string`                        | `.`      |
 | versionUpdatePolicy    | Set update policy for `version` field of Chart.yaml    | no       | `"fixed" \| "sync" \| "desync"` | `"sync"` |
 | appVersionUpdatePolicy | Set update policy for `appVersion` field of Chart.yaml | no       | `"fixed" \| "sync" \| "desync"` | `"sync"` |
 
-\* At least one of ociRegistry or chartrepository is required.
+\* At least one of ociRegistry or chartRepository is required.
 
 Pass credentials through environment variable to login helm repository.
 
 ```
 export HELM_REPOSITORY_USERNAME=<USERNAME>
 export HELM_REPOSITORY_PASSWORD=<PASSWORD>
+export HELM_REGISTRY_USERNAME=<USERNAME>
+export HELM_REGISTRY_PASSWORD=<PASSWORD>
 ```
+
+`HELM_REPOSITORY_USERNAME` and `HELM_REPOSITORY_PASSWORD` are used for chart repository login.
+
+`HELM_REGISTRY_USERNAME` and `HELM_REGISTRY_PASSWORD` are used for OCI registry login.
+
+If you are using oci registry and no credentials are provided, it will use the `HELM_REPOSITORY_USERNAME` and `HELM_REPOSITORY_PASSWORD` for login. 
 
 ### About versionUpdatePolicy & appVersionUpdatePolicy
 

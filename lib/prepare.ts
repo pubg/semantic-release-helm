@@ -9,21 +9,11 @@ export async function prepare(pluginConfig: PluginConfig, context: PrepareContex
 
     const oldChart = await loadHelmChart(chartDir);
 
-    const nextVersion = getNextVersion(
-        versionUpdatePolicy,
-        oldChart.version,
-        context.nextRelease.version,
-        context.nextRelease.type
-    );
+    const nextVersion = getNextVersion(versionUpdatePolicy, oldChart.version, context.nextRelease.version, context.nextRelease.type);
     if (!nextVersion) {
         throw new Error("Next Chart Version is undefined after applying version update policy.");
     }
-    const nextAppVersion = getNextVersion(
-        appVersionUpdatePolicy,
-        oldChart.appVersion,
-        context.nextRelease.version,
-        context.nextRelease.type
-    );
+    const nextAppVersion = getNextVersion(appVersionUpdatePolicy, oldChart.appVersion, context.nextRelease.version, context.nextRelease.type);
 
     const newChart: HelmChart = {
         ...oldChart,
