@@ -1,3 +1,16 @@
+# [1.4.0](https://github.com/pubg/semantic-release-helm/compare/v1.3.2...v1.4.0) (2024-06-10)
+
+
+### Bug Fixes
+
+* add npm token ([3824478](https://github.com/pubg/semantic-release-helm/commit/3824478da1dff1e790d07407c7e48c057ed9a76f))
+* add pass github_token env ([8bdcd36](https://github.com/pubg/semantic-release-helm/commit/8bdcd366221e8b1b8ed396967af4148ed27fba00))
+
+
+### Features
+
+* Refactor js to ts ([d58cc17](https://github.com/pubg/semantic-release-helm/commit/d58cc1747e6781ffee6a1812c6479dfd9d07c4f0))
+
 ## [1.3.2](https://git.projectbro.com/Devops/semantic-release-helm/compare/v1.3.1...v1.3.2) (2023-01-20)
 
 
