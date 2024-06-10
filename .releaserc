@@ -24,6 +24,11 @@
         ]
       }
     ],
-    "@semantic-release/github"
+    [
+      "@semantic-release/github",
+      {
+        "addReleases": "bottom"
+      }
+    ]
   ]
 }
